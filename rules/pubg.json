@@ -1,0 +1,12 @@
+[
+    {
+        "guid": "{2233d2d6-43c5-480f-ad18-4a0872419a8c}",
+        "category": "GAMES",
+        "name": "PUBG: BATTLEGROUNDS",
+        "description": "Land on strategic locations, loot weapons and supplies, and survive to become the last team standing",
+        "icon": "game.ico",
+        "rules": [
+            "*\\steamapps\\common\\PUBG\\*"
+        ]
+    }
+]

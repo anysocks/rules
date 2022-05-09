@@ -1,0 +1,12 @@
+[
+    {
+        "guid": "{438ae786-fed0-4816-924b-53a03bee6c72}",
+        "category": "PROGRAMMING",
+        "name": "Git for Windows",
+        "description": "Git for Windows provides a BASH emulation used to run Git from the command line.",
+        "icon": "git-bash.ico",
+        "rules": [
+            "*\\Program Files\\Git\\*"
+        ]
+    }
+]

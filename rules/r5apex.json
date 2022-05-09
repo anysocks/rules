@@ -1,0 +1,13 @@
+[
+    {
+        "guid": "{6e84a203-7b49-4ebc-a80d-a3cd36711320}",
+        "category": "GAMES",
+        "name": "Apex Legends",
+        "description": "Apex Legends",
+        "icon": "r5apex.ico",
+        "rules": [
+            "*\\Apex Legends\\*",
+            "r5apex.exe"
+        ]
+    }
+]

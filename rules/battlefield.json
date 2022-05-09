@@ -1,0 +1,16 @@
+[
+    {
+        "guid": "{b8bc5177-38f4-4848-89ba-5a2a8bd64991}",
+        "category": "GAMES",
+        "name": "Battle Field",
+        "description": "BattleField",
+        "icon": "battlefield.ico",
+        "rules": [
+            "*\\Battlefield*\\*",
+            "BFLauncher*.exe",
+            "PnkBstrA.exe",
+            "PnkBstrB.exe",
+            "PnkBstr*.exe"
+        ]
+    }
+]

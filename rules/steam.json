@@ -1,0 +1,36 @@
+[
+  {
+    "guid": "{3EF46BB7-52FF-4E86-A303-F4D927E5ED93}",
+    "category": "GAMES",
+    "name": "Steam",
+    "description": "The steam platform itself, not including games",
+    "icon": "steam.ico",
+    "rules": [
+      "steam.exe",
+      "*\\bin\\cef\\*\\*.exe",
+      "*\\cef\\*\\*steam*.exe"
+    ]
+  },
+  {
+    "guid": "{7E7A4AAA-E443-4B28-85D3-539EDBBB68A5}",
+    "category": "GAMES",
+    "name": "Steam web only",
+    "description": "Only the webview part of the Steam",
+    "icon": "steam.ico",
+    "rules": [
+      "*\\bin\\cef\\*\\*.exe",
+      "*\\cef\\*\\*steam*.exe",
+      "steamservice.exe"
+    ]
+  },
+  {
+    "guid": "{88247AB3-0D94-48D7-95C1-7162E2C390F6}",
+    "category": "GAMES",
+    "name": "Steam games",
+    "description": "All the steam games",
+    "icon": "steam.ico",
+    "rules": [
+      "*\\steamapps\\common\\*"
+    ]
+  }
+]

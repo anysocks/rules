@@ -11,6 +11,9 @@
       "PnkBstrA.exe",
       "PnkBstrB.exe",
       "PnkBstr*.exe"
+    ],
+    "dependencies": [
+      "{5f382283-87ac-4cae-b233-365aae01507a}"
     ]
   }
 ]

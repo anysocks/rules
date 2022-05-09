@@ -9,6 +9,9 @@
       "*\\steamapps\\common\\sandstorm\\*",
       "*\\sandstorm\\Insurgency*.exe",
       "InsurgencyClient-Win64-Shipping.exe"
+    ],
+    "dependencies": [
+      "{b8bc5177-38f4-4848-89ba-5a2a8bd64991}"
     ]
   }
 ]

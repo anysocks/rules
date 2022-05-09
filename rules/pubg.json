@@ -7,6 +7,9 @@
     "icon": "game.ico",
     "rules": [
       "*\\steamapps\\common\\PUBG\\*"
+    ],
+    "dependencies": [
+      "{b8bc5177-38f4-4848-89ba-5a2a8bd64991}"
     ]
   }
 ]

@@ -8,6 +8,10 @@
     "rules": [
       "*\\Apex Legends\\*",
       "r5apex.exe"
+    ],
+    "dependencies": [
+      "{9907e4d7-5ec6-408d-9fc7-adc96f3cd1a2}",
+      "{5f382283-87ac-4cae-b233-365aae01507a}"
     ]
   }
 ]

@@ -11,6 +11,10 @@
       "*\\Tom Clancy’s Rainbow Six*\\*",
       "*\\*Rainbow Six*\\*",
       "*rainbowsix*.exe"
+    ],
+    "dependencies": [
+      "{b8bc5177-38f4-4848-89ba-5a2a8bd64991}",
+      "{6adbc27f-7ed1-47dd-881f-c02103a3c8dd}"
     ]
   }
 ]

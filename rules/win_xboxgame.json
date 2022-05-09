@@ -4,7 +4,7 @@
     "category": "GAMES",
     "name": "Windows Xbox Gaming App",
     "description": "Windows 10/11 XBox Game App",
-    "icon": "game.ico",
+    "icon": "xbox.ico",
     "rules": [
       "*\\WindowsApps\\Microsoft.GamingApp*\\*"
     ]

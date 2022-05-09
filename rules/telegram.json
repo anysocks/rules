@@ -1,0 +1,10 @@
+{
+  "guid": "{833722b9-d9c0-4afb-bc27-1e2de974aef3}",
+  "category": "POPULARS",
+  "name": "Telegram Desktop",
+  "description": "Fast and secure desktop app, perfectly synced with your mobile phone.",
+  "icon": "telegram.ico",
+  "rules": [
+    "telegram.exe"
+  ]
+}

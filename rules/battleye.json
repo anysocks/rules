@@ -4,7 +4,7 @@
     "category": "GAMES",
     "name": "BattlEye",
     "description": "BattlEye",
-    "icon": "game.ico",
+    "icon": "battleye.ico",
     "rules": [
       "BEService.exe",
       "*\\Common Files\\BattlEye\\*",

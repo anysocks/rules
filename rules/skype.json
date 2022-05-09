@@ -1,0 +1,10 @@
+{
+  "guid": "{8bcdf66c-6c9b-4cb4-9883-ac0426324b69}",
+  "category": "GENERIC",
+  "name": "Skype",
+  "description": "Skype | Stay connected with free video calls worldwide.",
+  "icon": "skype.ico",
+  "rules": [
+    "Skype.exe"
+  ]
+}

@@ -4,9 +4,9 @@
     "category": "GAMES",
     "name": "PUBG: BATTLEGROUNDS",
     "description": "Land on strategic locations, loot weapons and supplies, and survive to become the last team standing",
-    "icon": "game.ico",
+    "icon": "battleye.ico",
     "rules": [
-      "*\\steamapps\\common\\PUBG\\*"
+      "*\\PUBG\\TslGame\\Binaries\\*"
     ],
     "dependencies": [
       "{b8bc5177-38f4-4848-89ba-5a2a8bd64991}"

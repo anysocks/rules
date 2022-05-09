@@ -1,0 +1,10 @@
+{
+  "guid": "{1b866ae8-6ec0-414f-a0b1-59a504987d2c}",
+  "category": "GENERIC",
+  "name": "Microsoft Edge",
+  "description": "Microsoft Edge is the fast and secure browser that helps you protect your data and save time and money.",
+  "icon": "msedge.ico",
+  "rules": [
+    "*\\Edge\\Application\\msedge.exe"
+  ]
+}

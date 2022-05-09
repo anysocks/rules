@@ -1,0 +1,11 @@
+{
+  "guid": "{fa0da787-e972-4ca7-98ee-979df798795e}",
+  "category": "POPULARS",
+  "name": "Google Chrome",
+  "description": "Browse with the power of Google.",
+  "icon": "chrome.ico",
+  "rules": [
+    "*\\Chrome\\Application\\chrome.exe",
+    "*\\Chrome\\Application\\*\\chrome_pwa_launcher.exe"
+  ]
+}

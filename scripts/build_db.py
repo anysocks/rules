@@ -27,7 +27,10 @@ CATEGORY_GUID_MAP = {
 }
 
 work_dir = os.path.dirname(os.path.dirname(__file__))
-db: SqliteDatabase = SqliteDatabase(sys.argv[2] if len(sys.argv) > 2 else os.path.join(work_dir, 'the_store.db'))
+db_path = sys.argv[2] if len(sys.argv) > 2 else os.path.join(work_dir, 'the_store.db')
+if os.path.isfile(db_path):
+    os.remove(db_path)
+db: SqliteDatabase = SqliteDatabase(db_path)
 
 
 class SHA1Filed(FixedCharField):

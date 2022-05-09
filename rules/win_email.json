@@ -1,13 +1,13 @@
-[ 
-    { 
-        "guid": "{6e77fc6f-c81a-44e4-bccf-df7d7cb84d6c}", 
-        "category": "GENERIC", 
-        "name": "Windows E-Mail", 
-        "description": "Windows 10/11 E-Mail", 
-        "icon": "default.ico", 
-        "rules": [ 
-        "*\\WindowsApps\\microsoft.windowscommunicationsapps*",
-        "AuthHost.exe"
-        ] 
-    } 
+[
+  {
+    "guid": "{6e77fc6f-c81a-44e4-bccf-df7d7cb84d6c}",
+    "category": "GENERIC",
+    "name": "Windows E-Mail",
+    "description": "Windows 10/11 E-Mail",
+    "icon": "default.ico",
+    "rules": [
+      "*\\WindowsApps\\microsoft.windowscommunicationsapps*",
+      "AuthHost.exe"
+    ]
+  }
 ]

@@ -1,15 +1,15 @@
-[ 
-    { 
-        "guid": "{9907e4d7-5ec6-408d-9fc7-adc96f3cd1a2}", 
-        "category": "GAMES", 
-        "name": "EasyAntiCheat", 
-        "description": "EasyAntiCheat", 
-        "icon": "easyanticheat.ico", 
-        "rules": [ 
-        "*EasyAntiCheat*.exe", 
-        "*\\EasyAntiCheat\\*", 
-        "*EasyAntiCheat*.*", 
-        "eac_*.exe" 
-        ] 
-    } 
+[
+  {
+    "guid": "{9907e4d7-5ec6-408d-9fc7-adc96f3cd1a2}",
+    "category": "GAMES",
+    "name": "EasyAntiCheat",
+    "description": "EasyAntiCheat",
+    "icon": "easyanticheat.ico",
+    "rules": [
+      "*EasyAntiCheat*.exe",
+      "*\\EasyAntiCheat\\*",
+      "*EasyAntiCheat*.*",
+      "eac_*.exe"
+    ]
+  }
 ]

@@ -1,14 +1,14 @@
 [
-    {
-        "guid": "{e8cce56b-d127-478b-9e4c-ce9ec2a2f3f0}",
-        "category": "GAMES",
-        "name": "BattlEye",
-        "description": "BattlEye",
-        "icon": "game.ico",
-        "rules": [
-            "BEService.exe", 
-            "*\\Common Files\\BattlEye\\*", 
-            "*\\BEService*.exe"
-        ]
-    }
+  {
+    "guid": "{e8cce56b-d127-478b-9e4c-ce9ec2a2f3f0}",
+    "category": "GAMES",
+    "name": "BattlEye",
+    "description": "BattlEye",
+    "icon": "game.ico",
+    "rules": [
+      "BEService.exe",
+      "*\\Common Files\\BattlEye\\*",
+      "*\\BEService*.exe"
+    ]
+  }
 ]

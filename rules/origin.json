@@ -1,13 +1,13 @@
-[ 
-    { 
-        "guid": "{5f382283-87ac-4cae-b233-365aae01507a}", 
-        "category": "GAMES", 
-        "name": "Origin", 
-        "description": "The Origin platform itself, not including games", 
-        "icon": "origin.ico", 
-        "rules": [ 
-        "*\\Origin\\*",
-        "*\\Origin\\Origin*.exe"
-        ] 
-    } 
+[
+  {
+    "guid": "{5f382283-87ac-4cae-b233-365aae01507a}",
+    "category": "GAMES",
+    "name": "Origin",
+    "description": "The Origin platform itself, not including games",
+    "icon": "origin.ico",
+    "rules": [
+      "*\\Origin\\*",
+      "*\\Origin\\Origin*.exe"
+    ]
+  }
 ]

@@ -1,13 +1,13 @@
 [
-    {
-        "guid": "{f7298548-7c53-4d2a-a3da-2c9c7a8f223e}",
-        "category": "GAMES",
-        "name": "Counter-Strike Global Offensive",
-        "description": "CSGO",
-        "icon": "csgo.ico",
-        "rules": [
-            "csgo.exe",
-            "*\\Counter-Strike Global Offensive\\*"
-        ]
-    }
+  {
+    "guid": "{f7298548-7c53-4d2a-a3da-2c9c7a8f223e}",
+    "category": "GAMES",
+    "name": "Counter-Strike Global Offensive",
+    "description": "CSGO",
+    "icon": "csgo.ico",
+    "rules": [
+      "csgo.exe",
+      "*\\Counter-Strike Global Offensive\\*"
+    ]
+  }
 ]

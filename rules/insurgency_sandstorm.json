@@ -1,14 +1,14 @@
 [
-    {
-        "guid": "{c4ea5e76-b469-458b-8b0f-913f6fcaf557}",
-        "category": "GAMES",
-        "name": "Insurgency Sandstorm",
-        "description": "None",
-        "icon": "Insurgency.ico",
-        "rules": [
-            "*\\steamapps\\common\\sandstorm\\*",
-            "*\\sandstorm\\Insurgency*.exe",
-            "InsurgencyClient-Win64-Shipping.exe",
-        ]
-    }
+  {
+    "guid": "{c4ea5e76-b469-458b-8b0f-913f6fcaf557}",
+    "category": "GAMES",
+    "name": "Insurgency Sandstorm",
+    "description": "None",
+    "icon": "Insurgency.ico",
+    "rules": [
+      "*\\steamapps\\common\\sandstorm\\*",
+      "*\\sandstorm\\Insurgency*.exe",
+      "InsurgencyClient-Win64-Shipping.exe"
+    ]
+  }
 ]

@@ -1,17 +1,17 @@
 [
-    {
-        "guid": "{fb62268e-296f-4cde-90ae-3538f7f3fb02}",
-        "category": "GAMES",
-        "name": "Elden Ring",
-        "description": "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
-        "icon": "eldenring.ico",
-        "rules": [
-            "*\\steamapps\\common\\ELDEN RING\\*",
-            "*\\Game\\eldenring.exe",
-            "*\\ELDEN RING\\Game\\start_protected_game.exe"
-        ],
-		"dependencies": [
-			"{9907e4d7-5ec6-408d-9fc7-adc96f3cd1a2}"
-		]
-    }
+  {
+    "guid": "{fb62268e-296f-4cde-90ae-3538f7f3fb02}",
+    "category": "GAMES",
+    "name": "Elden Ring",
+    "description": "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    "icon": "eldenring.ico",
+    "rules": [
+      "*\\steamapps\\common\\ELDEN RING\\*",
+      "*\\Game\\eldenring.exe",
+      "*\\ELDEN RING\\Game\\start_protected_game.exe"
+    ],
+    "dependencies": [
+      "{9907e4d7-5ec6-408d-9fc7-adc96f3cd1a2}"
+    ]
+  }
 ]

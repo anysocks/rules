@@ -1,10 +1,10 @@
 {
-    "guid": "{0373A8D9-BDE8-45F6-8BE6-1ABE93AA8688}",
-    "category": "PROGRAMMING",
-    "name": "Visual Studio",
-    "icon": "devenv.ico",
-    "description": "Visual Studio IDE",
-    "rules": [
-      "*\\Common7\\IDE\\*.exe"
-    ]
+  "guid": "{0373A8D9-BDE8-45F6-8BE6-1ABE93AA8688}",
+  "category": "PROGRAMMING",
+  "name": "Visual Studio",
+  "icon": "devenv.ico",
+  "description": "Visual Studio IDE",
+  "rules": [
+    "*\\Common7\\IDE\\*.exe"
+  ]
 }

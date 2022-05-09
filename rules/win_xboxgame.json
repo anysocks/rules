@@ -1,12 +1,12 @@
 [
-    {
-        "guid": "{bee81c91-c908-45be-8b2c-ff54caa38399}",
-        "category": "GAMES",
-        "name": "Windows Xbox Gaming App",
-        "description": "Windows 10/11 XBox Game App",
-        "icon": "game.ico",
-        "rules": [
-            "*\\WindowsApps\\Microsoft.GamingApp*\\*"
-        ]
-    }
+  {
+    "guid": "{bee81c91-c908-45be-8b2c-ff54caa38399}",
+    "category": "GAMES",
+    "name": "Windows Xbox Gaming App",
+    "description": "Windows 10/11 XBox Game App",
+    "icon": "game.ico",
+    "rules": [
+      "*\\WindowsApps\\Microsoft.GamingApp*\\*"
+    ]
+  }
 ]

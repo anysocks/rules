@@ -1,16 +1,16 @@
 [
-    {
-        "guid": "{ab4d2226-6288-48b3-bc45-39ee250d737a}",
-        "category": "GAMES",
-        "name": "Tom Clancy’s Rainbow Six",
-        "description": "Tom Clancy’s Rainbow Six",
-        "icon": "rainbowsix.ico",
-        "rules": [
-            "*\\Tom Clancy’s Rainbow Six Extraction\\*",
-            "*\\Tom Clancy’s Rainbow Six\\*",
-            "*\\Tom Clancy’s Rainbow Six*\\*",
-            "*\\*Rainbow Six*\\*",
-            "*rainbowsix*.exe"
-        ]
-    }
+  {
+    "guid": "{ab4d2226-6288-48b3-bc45-39ee250d737a}",
+    "category": "GAMES",
+    "name": "Tom Clancy’s Rainbow Six",
+    "description": "Tom Clancy’s Rainbow Six",
+    "icon": "rainbowsix.ico",
+    "rules": [
+      "*\\Tom Clancy’s Rainbow Six Extraction\\*",
+      "*\\Tom Clancy’s Rainbow Six\\*",
+      "*\\Tom Clancy’s Rainbow Six*\\*",
+      "*\\*Rainbow Six*\\*",
+      "*rainbowsix*.exe"
+    ]
+  }
 ]

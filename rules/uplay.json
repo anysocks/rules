@@ -1,13 +1,13 @@
-[ 
-    { 
-        "guid": "{6adbc27f-7ed1-47dd-881f-c02103a3c8dd}", 
-        "category": "GAMES", 
-        "name": "Uplay", 
-        "description": "The potato factory", 
-        "icon": "uplay.ico", 
-        "rules": [ 
-        "*\\Ubisoft Game Launcher\\*",
-        "Uplay*.exe"
-        ] 
-    } 
+[
+  {
+    "guid": "{6adbc27f-7ed1-47dd-881f-c02103a3c8dd}",
+    "category": "GAMES",
+    "name": "Uplay",
+    "description": "The potato factory",
+    "icon": "uplay.ico",
+    "rules": [
+      "*\\Ubisoft Game Launcher\\*",
+      "Uplay*.exe"
+    ]
+  }
 ]

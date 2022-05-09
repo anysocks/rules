@@ -1,14 +1,14 @@
 [
-    {
-        "guid": "{87fe20d5-acdf-491a-b81d-5f6734898a1e}",
-        "category": "GAMES",
-        "name": "Discord",
-        "description": "Discord is the easiest way to talk over voice, video, and text. Talk, chat, hang out, and stay close with your friends and communities.",
-        "icon": "discord.ico",
-        "rules": [
-            "*\\Discord\\*",
-            "Discord.exe",
-            "*\\WindowsApps\\*Discord*"
-        ]
-    }
+  {
+    "guid": "{87fe20d5-acdf-491a-b81d-5f6734898a1e}",
+    "category": "GAMES",
+    "name": "Discord",
+    "description": "Discord is the easiest way to talk over voice, video, and text. Talk, chat, hang out, and stay close with your friends and communities.",
+    "icon": "discord.ico",
+    "rules": [
+      "*\\Discord\\*",
+      "Discord.exe",
+      "*\\WindowsApps\\*Discord*"
+    ]
+  }
 ]

@@ -91,8 +91,16 @@ class RuleI18n(Model):
         database = db
 
 
+class RuleDependency(Model):
+    rule = ForeignKeyField(model=Rule)
+    depends_on = ForeignKeyField(model=Rule)
+
+    class Meta:
+        database = db
+
+
 class RuleExpr(Model):
-    owner = ForeignKeyField(model=Rule)
+    rule = ForeignKeyField(model=Rule)
     expr = CharField(max_length=256)
 
     class Meta:
@@ -103,6 +111,7 @@ class Processor(object):
     def __init__(self, db_name: str):
         self.icons_dir = os.path.join(work_dir, 'icons')
         self.rules_dir = os.path.join(work_dir, 'rules')
+        self.dependency_map = dict()
 
     def start(self):
         for root_dir, dir_list, file_list in os.walk(self.rules_dir):
@@ -112,6 +121,7 @@ class Processor(object):
                     self._process_single_rule(filename)
                 except Exception as e:
                     print(e)
+        self._build_dependency_map()
 
     def _process_single_rule(self, filename: str):
         obj = json.load(open(filename))
@@ -159,9 +169,31 @@ class Processor(object):
             # create expressions
             expr_list = []
             for r in obj['rules']:
-                expr_list.append(RuleExpr(owner=rule_obj,
+                expr_list.append(RuleExpr(rule=rule_obj,
                                           expr=r))
             RuleExpr.bulk_create(expr_list)
+
+        if 'dependencies' in obj and obj['dependencies']:
+            self.dependency_map[obj['guid']] = obj['dependencies']
+
+    def _build_dependency_map(self):
+        for rule_id, dep_list in self.dependency_map.items():
+            rule = Rule.get_or_none(guid=rule_id)
+            if not rule:
+                continue
+
+            dep_entries = []
+            no_err = True
+            for dep_id in dep_list:
+                dep_rule = Rule.get_or_none(guid=dep_id)
+                if not dep_rule:
+                    no_err = False
+                    break
+                dep_entries.append(RuleDependency(rule=rule,
+                                                  depends_on=dep_rule))
+            if no_err:
+                with db.atomic():
+                    RuleDependency.bulk_create(dep_entries)
 
 
 if __name__ == '__main__':

@@ -27,10 +27,18 @@ CATEGORY_GUID_MAP = {
 }
 
 work_dir = os.path.dirname(os.path.dirname(__file__))
-db_path = sys.argv[2] if len(sys.argv) > 2 else os.path.join(work_dir, 'the_store.db')
-if os.path.isfile(db_path):
-    os.remove(db_path)
-db: SqliteDatabase = SqliteDatabase(db_path)
+print("Work dir: ", work_dir)
+
+# create output dir
+db_dir = sys.argv[2] if len(sys.argv) > 2 else os.path.join(work_dir, "out")
+os.makedirs(db_dir, exist_ok=True)
+
+# clean old database file if exists
+db_filename = os.path.join(db_dir, "builtin-rules.db")
+if os.path.isfile(db_filename):
+    os.remove(db_filename)
+
+db: SqliteDatabase = SqliteDatabase(db_filename)
 
 
 class SHA1Filed(FixedCharField):

@@ -16,7 +16,7 @@ def handle(f: str):
     parser = icoparser.IcoParser.parse(icon.read())
     new_imgs = []
     for img in parser.images:
-        print(img.width, img.height, img.color_depth, img.bpp)
+        print("spec: ", img.width, img.height, img.color_depth, img.bpp)
         if img.bpp != 32 or img.width < 16 or img.width > 64:
             print("^ REMOVED ^")
         else:
@@ -26,6 +26,7 @@ def handle(f: str):
     # rebuild
     with open(os.path.join(icons_dir, "{}.ico".format(p.stem).lower()), 'wb') as fd:
         fd.write(parser.build())
+    print("output: ", os.path.abspath(fd.name))
 
 
 if __name__ == '__main__':

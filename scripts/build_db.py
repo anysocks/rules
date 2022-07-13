@@ -8,13 +8,13 @@ from enum import Enum
 from peewee import *
 
 # CLASS GUIDS
-RULE_CLS_POPULAR_APPS = '{E746292E-C9C2-4533-9410-D50382838CB2}'
-RULE_CLS_GAMES = '{D38180F7-6C87-4EE2-AEDA-809B8921861D}'
-RULE_CLS_PROGRAMMING = '{376BE542-66CE-47EA-A1C9-609CE97030D6}'
-RULE_CLS_PRODUCTIVITY = '{A2D14147-04BE-4159-B977-0B0EF0E5F17D}'
-RULE_CLS_SYSTEM_APPS = '{23E51D07-900A-464D-A7AD-FEA9A4E63ADF}'
-RULE_CLS_GENERIC_APPS = '{69A4BC26-7668-471D-B01A-1C2DB53D57E2}'
-RULE_CLS_OTHERS = '{8051B0E9-BEE5-425E-B168-EE4DFC3D394F}'
+RULE_CLS_POPULAR_APPS = '{e746292e-c9c2-4533-9410-d50382838cb2}'
+RULE_CLS_GAMES = '{d38180f7-6c87-4ee2-aeda-809b8921861d}'
+RULE_CLS_PROGRAMMING = '{376be542-66ce-47ea-a1c9-609ce97030d6}'
+RULE_CLS_PRODUCTIVITY = '{a2d14147-04be-4159-b977-0b0ef0e5f17d}'
+RULE_CLS_SYSTEM_APPS = '{23e51d07-900a-464d-a7ad-fea9a4e63adf}'
+RULE_CLS_GENERIC_APPS = '{69a4bc26-7668-471d-b01a-1c2db53d57e2}'
+RULE_CLS_OTHERS = '{8051b0e9-bee5-425e-b168-ee4dfc3d394f}'
 
 CATEGORY_GUID_MAP = {
     "POPULARS": RULE_CLS_POPULAR_APPS,
@@ -78,14 +78,14 @@ class Rule(Model):
     cat_guid = FixedCharField(max_length=38)
     name = CharField(max_length=64)
     description = CharField(max_length=256, null=True)
-    icon = ForeignKeyField(model=RuleIcon, null=True)
+    icon_hash = SHA1Filed(null=True)
 
     class Meta:
         database = db
 
 
 class RuleI18n(Model):
-    owner = ForeignKeyField(model=Rule)
+    rule_id = FixedCharField(max_length=38, null=False)
     locale = CharField(max_length=12)
     name = CharField(max_length=64)
     description = CharField(max_length=256, null=True)
@@ -95,15 +95,15 @@ class RuleI18n(Model):
 
 
 class RuleDependency(Model):
-    rule = ForeignKeyField(model=Rule)
-    depends_on = ForeignKeyField(model=Rule)
+    rule_id = FixedCharField(max_length=38, null=False)
+    depends_on_id = FixedCharField(max_length=38, null=False)
 
     class Meta:
         database = db
 
 
 class RuleExpr(Model):
-    rule = ForeignKeyField(model=Rule)
+    rule_id = FixedCharField(max_length=38, null=False)
     expr = CharField(max_length=256)
 
     class Meta:
@@ -159,25 +159,27 @@ class Processor(object):
                     sha1 = hashlib.sha1()
                     sha1.update(ico_data)
                     ico_hash = sha1.hexdigest()
-                    ico_obj = RuleIcon.get_or_create(hash=ico_hash,
-                                                     type=RuleIcon.IconType.ICO,
-                                                     data=ico_data)
+                    ico_obj, ok = RuleIcon.get_or_create(hash=ico_hash,
+                                                         type=RuleIcon.IconType.ICO,
+                                                         data=ico_data)
+                    if not ok:
+                        return
             # create rule object
-            rule_obj = Rule.create(guid=obj['guid'],
+            rule_obj = Rule.create(guid=obj['guid'].lower(),
                                    cat_guid=cat_guid,
                                    name=obj['name'],
                                    description=(obj['description'] if 'description' in obj else ''),
-                                   icon=ico_obj)
+                                   icon_hash=ico_obj.hash)
 
             # create expressions
             expr_list = []
             for r in obj['rules']:
-                expr_list.append(RuleExpr(rule=rule_obj,
+                expr_list.append(RuleExpr(rule_id=rule_obj.guid,
                                           expr=r))
             RuleExpr.bulk_create(expr_list)
 
         if 'dependencies' in obj and obj['dependencies']:
-            self.dependency_map[obj['guid']] = obj['dependencies']
+            self.dependency_map[obj['guid'].lower()] = obj['dependencies']
 
     def _build_dependency_map(self):
         for rule_id, dep_list in self.dependency_map.items():
@@ -192,8 +194,8 @@ class Processor(object):
                 if not dep_rule:
                     no_err = False
                     break
-                dep_entries.append(RuleDependency(rule=rule,
-                                                  depends_on=dep_rule))
+                dep_entries.append(RuleDependency(rule_id=rule.guid,
+                                                  depends_on_id=dep_rule.guid))
             if no_err:
                 with db.atomic():
                     RuleDependency.bulk_create(dep_entries)
